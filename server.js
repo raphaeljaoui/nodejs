@@ -1,17 +1,24 @@
 const express = require('express')
-const myApp = express()
+const app = express()
 
-myApp.get('/', function(req,res){
+app.get('/', function(req,res){
     res.send('Hello world!')
 })
-myApp.get('/hello', function(req,res){
-    if(req.query.country == '' || req.query.country == undefined){
-           res.send('Which country?')
-       }
-       else
-       res.send('Bonjour, '+ req.query.country+'!')
-   })
 
-myApp.listen(3000, function(){
+app.get("/hello", function(req,res){
+    if(req.query.nom == '' || req.querry.nom == undefined){
+        res.send('Quel est votre nom ?')
+    }
+    res.send('Bonjour, '+ req.query.nom+' !')
+})
+
+app.post('/chat', function (req, res) {
+    if(req.body.msg == 'ville')
+        res.send('Nous sommes à Paris.');
+    if(req.body.msg == 'meteo')
+        res.send('Il fait beau.')
+  });
+
+app.listen(3000, function(){
     console.log('port 3000')
 })
