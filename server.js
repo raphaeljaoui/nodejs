@@ -4,9 +4,6 @@ const app = express()
 app.get('/', function(req,res){
     res.send('Hello world!')
 })
-// app.get("/hello", function(req,res){
-//     res.send('Quel est votre nom ?')
-// })
 
 app.get("/hello", function(req,res){
     if(req.query.nom == null){
@@ -15,8 +12,11 @@ app.get("/hello", function(req,res){
     res.send('Bonjour, '+ req.query.nom+' !')
 })
 
-app.post('/', function (req, res) {
-    res.send('Got a POST request');
+app.get('/chat', function (req, res) {
+    res.send('Je ne connais pas demain…');
+  });
+app.post('/chat', function (req, res) {
+    res.send(req.body.app);
   });
 
 app.listen(3000, function(){
