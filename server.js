@@ -16,7 +16,7 @@ app.get('/chat', function (req, res) {
     res.send('Je ne connais pas demain…');
   });
 app.post('/chat', function (req, res) {
-    res.send(req.body.app);
+    res.send(req.body.msg);
   });
 
 app.listen(3000, function(){
