@@ -15,6 +15,9 @@ app.get("/hello", function(req,res){
     res.send('Bonjour, '+ req.query.nom+' !')
 })
 
+app.post('/', function (req, res) {
+    res.send('Got a POST request');
+  });
 
 app.listen(3000, function(){
     console.log('port 3000')
