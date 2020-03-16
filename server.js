@@ -9,7 +9,7 @@ app.get('/', function(req,res){
 // })
 
 app.get("/hello", function(req,res){
-    if(req.query.name == null){
+    if(req.query.nom == null){
         res.send('Quel est votre nom ?')
     }
     res.send('bonjour, '+ req.query.nom)
