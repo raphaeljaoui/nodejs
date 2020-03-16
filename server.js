@@ -8,8 +8,8 @@ app.get("/hello", function(req,res){
     res.send('Quel est votre nom ?')
 })
 
-app.get("/hello/:id", function(req,res){
-    res.send('bonjour '+ req.params.id)
+app.get("/hello", function(req,res){
+    res.send('bonjour, '+ req.query)
 })
 
 
