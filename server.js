@@ -4,7 +4,7 @@ const app = express()
 app.get('/', function(req,res){
     res.send('Hello world!')
 })
-app.get('/hello/:id', function(req,res){
+app.get('/hello?nom=:id', function(req,res){
     res.send('bonjour'+ req.params.id)
 })
 
