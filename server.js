@@ -9,7 +9,7 @@ app.get('/', function(req,res){
 // })
 
 app.get("/hello", function(req,res){
-    res.send('bonjour, '+ req.query)
+    res.send('bonjour, '+ req.query.nom)
 })
 
 
